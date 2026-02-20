@@ -1,10 +1,11 @@
 import { NavLink, FooterSection } from "@/types";
 
 export const mainNavLinks: NavLink[] = [
-  { label: "Home", href: "#" },
-  { label: "Packages", href: "#" },
-  { label: "About Us", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Inicio", href: "#", icon: "home", description: "Página principal" },
+  { label: "Destinos", href: "#", icon: "explore", description: "Lugares increíbles" },
+  { label: "Paquetes", href: "#", icon: "luggage", description: "Planes a tu medida" },
+  { label: "Nosotros", href: "#", icon: "group", description: "Conoce el equipo" },
+  { label: "Contacto", href: "#", icon: "mail", description: "Escríbenos" },
 ];
 
 export const footerSections: FooterSection[] = [

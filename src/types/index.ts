@@ -54,9 +54,41 @@ export interface FAQItem {
 export interface NavLink {
   label: string;
   href: string;
+  icon?: string;
+  description?: string;
 }
 
 export interface FooterSection {
   title: string;
   links: NavLink[];
+}
+
+export interface DestinationExperience {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface GalleryPhoto {
+  image: string;
+  alt: string;
+  caption: string;
+  rotation: number;
+}
+
+export interface DestinationDetail {
+  id: string;
+  name: string;
+  region: string;
+  description: string;
+  heroImage: string;
+  heroImageAlt: string;
+  polaroidCaption: string;
+  pricePerNight: number;
+  currency: string;
+  climate: { temp: string; type: string };
+  bestSeason: { months: string; type: string };
+  experiences: DestinationExperience[];
+  gallery: GalleryPhoto[];
+  quote: { text: string; author: string };
 }

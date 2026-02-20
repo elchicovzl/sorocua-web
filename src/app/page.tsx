@@ -2,6 +2,7 @@ import HeroCarousel from "@/components/sections/HeroCarousel";
 import Destinations from "@/components/sections/Destinations";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
+import Contact from "@/components/sections/Contact";
 import ParallaxBackground from "@/components/ui/ParallaxBackground";
 
 export default function HomePage() {
@@ -23,6 +24,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <Testimonials />
           <FAQ />
+          <Contact />
         </div>
       </ParallaxBackground>
     </>

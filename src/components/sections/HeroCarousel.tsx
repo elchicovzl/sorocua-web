@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { heroSlides } from "@/data/hero-slides";
@@ -61,26 +62,29 @@ export default function HeroCarousel() {
       </div>
 
       {/* Content overlay */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 w-full h-full flex items-center">
+      <div className="relative z-20 max-w-7xl mx-auto px-6 w-full h-full flex items-end pb-24 md:items-center md:pb-0 pt-20 md:pt-0">
         <div className="max-w-2xl">
-          <span className="inline-block bg-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6 backdrop-blur-md border border-white/30 shadow-lg">
+          <span className="inline-block bg-white/20 text-white px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-6 backdrop-blur-md border border-white/30 shadow-lg">
             {heroSlides[selectedIndex]?.badge}
           </span>
 
-          <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.9] mb-6 tracking-tight uppercase drop-shadow-2xl font-luxury">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-white leading-[0.9] mb-4 sm:mb-6 tracking-tight uppercase drop-shadow-2xl font-luxury">
             {heroSlides[selectedIndex]?.title}
           </h1>
 
-          <p className="text-lg md:text-xl text-slate-50 mb-10 leading-relaxed font-medium drop-shadow-lg max-w-lg">
+          <p className="text-base sm:text-lg md:text-xl text-slate-50 mb-6 sm:mb-10 leading-relaxed font-medium drop-shadow-lg max-w-lg">
             {heroSlides[selectedIndex]?.subtitle}
           </p>
 
-          <button className="bg-primary text-slate-900 px-10 py-4 rounded-full text-base font-bold transition-all hover:bg-primary-dark transform hover:-translate-y-1 shadow-xl shadow-primary/30 border border-white/20">
+          <Link
+            href={heroSlides[selectedIndex]?.ctaHref || "#"}
+            className="inline-block bg-primary text-slate-900 px-6 sm:px-10 py-3 sm:py-4 rounded-full text-sm sm:text-base font-bold transition-all hover:bg-primary-dark transform hover:-translate-y-1 shadow-xl shadow-primary/30 border border-white/20"
+          >
             {heroSlides[selectedIndex]?.ctaLabel}
-          </button>
+          </Link>
 
           {/* Navigation */}
-          <div className="flex items-center gap-4 mt-12">
+          <div className="flex items-center gap-3 sm:gap-4 mt-6 sm:mt-12">
             <button
               onClick={scrollPrev}
               className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white/20 transition-all backdrop-blur-md"

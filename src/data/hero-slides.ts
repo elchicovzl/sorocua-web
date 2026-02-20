@@ -10,7 +10,7 @@ export const heroSlides: HeroSlide[] = [
     image: "/images/hero/bora-bora.jpg",
     imageAlt: "Bora Bora Overwater Bungalows",
     ctaLabel: "Ver Detalles",
-    ctaHref: "#",
+    ctaHref: "/destinations/bora-bora",
   },
   {
     id: "los-roques",
@@ -21,7 +21,7 @@ export const heroSlides: HeroSlide[] = [
     image: "/images/hero/roques.jpg",
     imageAlt: "Los Roques turquoise waters",
     ctaLabel: "Explorar",
-    ctaHref: "#",
+    ctaHref: "/destinations/los-roques",
   },
   {
     id: "punta-cana",
@@ -32,6 +32,6 @@ export const heroSlides: HeroSlide[] = [
     image: "/images/hero/punta-cana.jpg",
     imageAlt: "Punta Cana palm trees and beach",
     ctaLabel: "Descubre Más",
-    ctaHref: "#",
+    ctaHref: "/destinations/punta-cana",
   },
 ];

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Destination } from "@/types";
 import TapeEffect from "./TapeEffect";
@@ -51,13 +52,13 @@ export default function PolaroidCard({
           <span className="font-handwriting text-2xl text-slate-700 font-bold">
             desde ${destination.price}
           </span>
-          <a
+          <Link
             href={destination.href}
             className="text-primary hover:text-slate-900 transition-colors flex items-center gap-1 text-xs font-bold uppercase tracking-wider"
           >
             Ver más
             <Icon name="arrow_outward" className="text-sm" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>
